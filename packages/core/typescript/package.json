@@ -1,0 +1,49 @@
+{
+  "name": "@gistplus/core",
+  "version": "0.1.0",
+  "description": "Core protocol schemas, types, and signature verification for Gist Plus",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "gistplus",
+    "gist",
+    "protocol",
+    "solana",
+    "payments",
+    "ai-agents"
+  ],
+  "author": "Gist Plus",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gistplusxyz/gistplus"
+  },
+  "homepage": "https://github.com/gistplusxyz/gistplus#readme",
+  "bugs": {
+    "url": "https://github.com/gistplusxyz/gistplus/issues"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "tweetnacl": "^1.0.3",
+    "bs58": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11",
+    "rimraf": "^5.0.5"
+  }
+}

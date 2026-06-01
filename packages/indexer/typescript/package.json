@@ -1,0 +1,46 @@
+{
+  "name": "@gistplus/indexer",
+  "version": "0.1.0",
+  "description": "Indexer for Gist Plus - aggregates receipts, tracks reputation, analyzes SLA compliance",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rimraf dist",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "gistplus",
+    "gist",
+    "indexer",
+    "analytics",
+    "reputation"
+  ],
+  "author": "Gist Plus",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gistplusxyz/gistplus"
+  },
+  "homepage": "https://github.com/gistplusxyz/gistplus#readme",
+  "bugs": {
+    "url": "https://github.com/gistplusxyz/gistplus/issues"
+  },
+  "dependencies": {
+    "@gistplus/core": "^0.1.0",
+    "@solana/web3.js": "^1.87.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6",
+    "rimraf": "^5.0.5"
+  }
+}

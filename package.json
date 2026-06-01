@@ -1,0 +1,47 @@
+{
+  "name": "gistplus-monorepo",
+  "version": "0.1.0",
+  "description": "Gist Plus - Programmable Commerce for Autonomous AI Systems",
+  "private": true,
+  "workspaces": [
+    "packages/core/typescript",
+    "packages/client/typescript",
+    "packages/server/typescript",
+    "packages/gateway/typescript",
+    "packages/indexer/typescript"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:core": "npm run build -w @gistplus/core",
+    "build:client": "npm run build -w @gistplus/client",
+    "build:server": "npm run build -w @gistplus/server",
+    "build:gateway": "npm run build -w @gistplus/gateway",
+    "build:indexer": "npm run build -w @gistplus/indexer",
+    "test": "npm run test --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "publish:all": "node scripts/publish-all.js",
+    "publish:dry": "node scripts/publish-all.js --dry-run",
+    "example:agent": "node examples/ai-agent/index.js",
+    "example:provider": "node examples/api-provider/index.js"
+  },
+  "keywords": [
+    "gistplus",
+    "gist",
+    "solana",
+    "ai",
+    "payment",
+    "protocol",
+    "blockchain",
+    "commerce",
+    "autonomous-agents"
+  ],
+  "author": "Gist Plus",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6",
+    "prettier": "^3.1.1",
+    "eslint": "^8.56.0",
+    "rimraf": "^5.0.5"
+  }
+}

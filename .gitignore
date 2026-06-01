@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+env/
+ENV/
+
+# Build outputs
+dist/
+build/
+*.js
+*.d.ts
+*.js.map
+!jest.config.js
+!prettier.config.js
+!eslint.config.js
+!examples/**/*.js
+!scripts/**/*.js
+!tests/**/*.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Solana
+target/
+**/*.rs.bk
+test-ledger/
+
+# Temp
+.temp/
+tmp/
+

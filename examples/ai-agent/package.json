@@ -1,0 +1,22 @@
+{
+  "name": "@gistplus/example-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Example AI agent using Gist Plus",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@gistplus/client": "workspace:*",
+    "@solana/web3.js": "^1.87.6",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6",
+    "ts-node": "^10.9.2"
+  }
+}
+

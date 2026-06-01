@@ -1,0 +1,31 @@
+{
+  "name": "@gistplus/production-examples",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Production-ready examples for Gist Plus",
+  "scripts": {
+    "provider:local": "SOLANA_NETWORK=localnet ts-node provider-devnet.ts",
+    "provider:devnet": "ts-node provider-devnet.ts",
+    "provider:testnet": "SOLANA_NETWORK=testnet ts-node provider-devnet.ts",
+    "provider:mainnet": "SOLANA_NETWORK=mainnet-beta ts-node provider-devnet.ts",
+    "agent:local": "SOLANA_NETWORK=localnet ts-node agent-devnet.ts",
+    "agent:devnet": "ts-node agent-devnet.ts",
+    "agent:testnet": "SOLANA_NETWORK=testnet ts-node agent-devnet.ts",
+    "agent:mainnet": "SOLANA_NETWORK=mainnet-beta ts-node agent-devnet.ts"
+  },
+  "dependencies": {
+    "@gistplus/client": "workspace:*",
+    "@gistplus/server": "workspace:*",
+    "@gistplus/core": "workspace:*",
+    "@solana/web3.js": "^1.87.6",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6",
+    "@types/express": "^4.17.21",
+    "ts-node": "^10.9.2"
+  }
+}
+

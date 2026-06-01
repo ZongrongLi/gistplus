@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node"
+  },
+  "references": [
+    { "path": "./packages/core/typescript" },
+    { "path": "./packages/client/typescript" },
+    { "path": "./packages/server/typescript" },
+    { "path": "./packages/gateway/typescript" },
+    { "path": "./packages/indexer/typescript" }
+  ]
+}
+

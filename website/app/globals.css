@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f4f3ee;
+    color: #0b0b0b;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #0b0b0b;
+    color: #f4f3ee;
+  }
+
+  /* Tighten big display type like an editorial layout. */
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer components {
+  /* Hard-edged card with a 1px ink rule. */
+  .box {
+    @apply border border-ink bg-paper;
+  }
+
+  /* Card that lifts onto a hard offset shadow. */
+  .box-hard {
+    @apply border border-ink bg-paper transition-[transform,box-shadow] duration-200;
+  }
+  .box-hard:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 4px 4px 0 0 #0b0b0b;
+  }
+
+  /* Solid ink button that inverts on hover. */
+  .btn-ink {
+    @apply inline-flex items-center justify-center gap-2 border border-ink bg-ink px-5 py-3
+      font-mono text-xs font-bold uppercase tracking-[0.18em] text-paper
+      transition-colors duration-150 hover:bg-paper hover:text-ink;
+  }
+
+  /* Outline button that fills with ink on hover. */
+  .btn-line {
+    @apply inline-flex items-center justify-center gap-2 border border-ink bg-paper px-5 py-3
+      font-mono text-xs font-bold uppercase tracking-[0.18em] text-ink
+      transition-colors duration-150 hover:bg-ink hover:text-paper;
+  }
+
+  /* Small monospace label. */
+  .eyebrow {
+    @apply font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-smoke;
+  }
+
+  .tag {
+    @apply inline-flex items-center gap-1.5 border border-ink px-2 py-0.5
+      font-mono text-[10px] font-bold uppercase tracking-[0.16em];
+  }
+
+  /* Section number index like "01 / 06". */
+  .index-num {
+    @apply font-mono text-xs font-bold tracking-[0.2em] text-smoke;
+  }
+}
+
+@layer utilities {
+  /* Inverted (dark) section. */
+  .invert-section {
+    background-color: #0b0b0b;
+    color: #f4f3ee;
+  }
+  .invert-section ::selection {
+    background: #f4f3ee;
+    color: #0b0b0b;
+  }
+
+  /* Engineering grid background. */
+  .bg-grid {
+    background-image: linear-gradient(#0b0b0b14 1px, transparent 1px),
+      linear-gradient(90deg, #0b0b0b14 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bg-grid-dark {
+    background-image: linear-gradient(#ffffff12 1px, transparent 1px),
+      linear-gradient(90deg, #ffffff12 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Diagonal hatch fill. */
+  .hatch {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #0b0b0b,
+      #0b0b0b 1px,
+      transparent 1px,
+      transparent 7px
+    );
+  }
+  .hatch-light {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #f4f3ee,
+      #f4f3ee 1px,
+      transparent 1px,
+      transparent 7px
+    );
+  }
+
+  /* Outlined (stroke-only) display text. */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.4px #0b0b0b;
+  }
+  .invert-section .text-outline {
+    -webkit-text-stroke: 1.4px #f4f3ee;
+  }
+
+  .underline-thick {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+}
+
+/* Square, monochrome scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f3ee;
+  border-left: 1px solid #0b0b0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #0b0b0b;
+  border: 3px solid #f4f3ee;
+}
+
+pre {
+  @apply overflow-x-auto;
+}
+code {
+  @apply font-mono;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
