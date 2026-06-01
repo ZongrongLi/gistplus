@@ -8,7 +8,7 @@
 [![Website](https://img.shields.io/badge/docs-gistplus.dev-8b5cf6?style=flat-square)](https://gistplus.dev)
 [![Twitter Follow](https://img.shields.io/twitter/follow/gistplus?style=social)](https://x.com/gistplus)
 
-**The economic layer for autonomous AI agents.**
+**Programmable commerce for autonomous AI agents — on Solana.**
 
 Gist Plus is a programmable commerce protocol on Solana. Agents negotiate pricing, open prepaid sessions, pay per request, and verify every response with cryptographic receipts — no API keys, no manual billing, no humans in the loop.
 
@@ -167,7 +167,7 @@ gistplus/
 ```bash
 npm install          # install all workspaces
 npm run build        # build all packages
-npm run publish:dry  # dry-run npm publish
+cd packages/core/typescript && npm test  # run unit tests (core)
 ```
 
 ---

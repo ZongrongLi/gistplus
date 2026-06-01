@@ -17,7 +17,7 @@
     "build:server": "npm run build -w @gistplus/server",
     "build:gateway": "npm run build -w @gistplus/gateway",
     "build:indexer": "npm run build -w @gistplus/indexer",
-    "test": "npm run test --workspaces --if-present",
+    "test": "jest --config jest.config.js",
     "clean": "npm run clean --workspaces --if-present",
     "publish:all": "node scripts/publish-all.js",
     "publish:dry": "node scripts/publish-all.js --dry-run",

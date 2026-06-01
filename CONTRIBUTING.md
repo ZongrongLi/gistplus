@@ -26,7 +26,6 @@ We love your input! We want to make contributing to Gist Plus as easy and transp
 # Clone the repo
 git clone https://github.com/gistplusxyz/gistplus.git
 cd gistplus
-cd protocol
 
 # Install dependencies
 npm install
@@ -34,7 +33,7 @@ npm install
 # Build all packages
 npm run build
 
-# Run tests
+# Run all tests
 npm test
 ```
 
@@ -143,18 +142,16 @@ pub fn initialize_session(
 
 ### Unit Tests
 
-```typescript
-describe('createIntent', () => {
-  it('should create valid intent', () => {
-    const intent = createIntent({
-      capability: 'test',
-      maxPricePerRequest: 0.01,
-      token: 'USDC',
-      agentPubkey: keypair.publicKey,
-    });
-    expect(intent.intentId).toBeDefined();
-  });
-});
+Tests live in `packages/core/typescript/src/__tests__/`. Run the full suite from the repo root:
+
+```bash
+npm test
+```
+
+Or run tests for a specific package:
+
+```bash
+npx jest --selectProjects @gistplus/core
 ```
 
 ### Integration Tests
@@ -262,15 +259,12 @@ By contributing, you agree that your contributions will be licensed under the Ap
 
 ## 🙏 Recognition
 
-Contributors will be:
-- Listed in CONTRIBUTORS.md
-- Mentioned in release notes
-- Credited in documentation
+| Contributions are tracked by GitHub and listed on the [Insights > Contributors](https://github.com/gistplusxyz/gistplus/graphs/contributors) page.
 
 ## 💬 Questions?
 
-- GitHub Discussions: [github.com/gistplusxyz/gistplus/discussions](https://github.com/gistplusxyz/gistplus/discussions)
-- X: [@gistplus](https://x.com/gistplus)
+- **GitHub Issues:** [github.com/gistplusxyz/gistplus/issues](https://github.com/gistplusxyz/gistplus/issues) — use for bugs, features
+- **X (Twitter):** [@gistplus](https://x.com/gistplus)
 
 **Thank you for contributing to Gist Plus!**
 
